@@ -10,11 +10,24 @@ img{
 .pacifico{
 	font-family: 'Pacifico', cursive;
 }
+.se-gris{
+	background-color: #eee;
+}
+.padding-largo{
+	padding: 5px 10px;
+}
 .grande{
 	font-size: 3em;
 }
 .verde{
 	color: #00887C;
+}
+.no-lista {
+	margin: 0px;
+	padding: 0px;
+}
+.no-lista li{
+		list-style-type:none;
 }
 .espacio-derecha{
 	margin-right: 1em;
