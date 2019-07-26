@@ -29,6 +29,10 @@ img{
 .no-lista li{
 		list-style-type:none;
 }
+.inline-block{
+	float: none;
+	display: inline-block;
+}
 .espacio-derecha{
 	margin-right: 1em;
 }
