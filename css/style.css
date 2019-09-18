@@ -13,6 +13,9 @@ img{
 .se-gris{
 	background-color: #eee;
 }
+.vete-arriba{
+	vertical-align: top;
+}
 .padding-largo{
 	padding: 5px 10px;
 }
@@ -37,6 +40,7 @@ img{
 .espacio-derecha{
 	margin-right: 1em;
 }
-a{
+a, .azul {
 	color: #009FFF;
 }
+k
