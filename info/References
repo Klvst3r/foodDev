@@ -77,6 +77,7 @@ Free Accounts
 	https://onthehub.com/product-category/free-software/
 	https://www.labnol.org/software/microsoft-dreamspark-for-students/9481/
 	http://freestudentsoftware.com/
+	https://marketplace.atlassian.com/apps/1212525/pages-for-bitbucket-server?hosting=server&tab=overview
 
 Dev for Education
 	https://azureforeducation.microsoft.com/devtools
@@ -87,7 +88,19 @@ Dev for Education
 	
 
 
+Upgrade NodeJS
+	
+	curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+	sudo apt-get install -y nodejs
+		From
+			https://askubuntu.com/questions/426750/how-can-i-update-my-nodejs-to-the-latest-version
 
+	https://www.hostingadvice.com/how-to/update-node-js-latest-version/
+	https://es.stackoverflow.com/questions/173111/como-actualizar-nodejs-en-ubuntu
+
+	https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/
+
+	https://www.dbigcloud.com/sistemas-operativos/258-como-actualizar-node-js.html
 
 
 
