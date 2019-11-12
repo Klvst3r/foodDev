@@ -104,3 +104,15 @@ Upgrade NodeJS
 
 
 
+Install Mongo DB
+-------------------
+	https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+
+Webframewor Express JS
+--------------------
+	http://expressjs.com/
+
+	Install Express JS
+
+		$ npm install express --save
