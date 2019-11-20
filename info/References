@@ -116,3 +116,9 @@ Webframewor Express JS
 	Install Express JS
 
 		$ npm install express --save
+Correr Node
+-----------------
+
+	$ node app.js
+	Browser:
+		http://localhost:8081/
