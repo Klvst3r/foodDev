@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+	head
+		title FoodDev Web Page
+	body
+		h1 Hola Mundo
+
+//- <!doctype html>
+//- <head>
+//- 	<title>
+//- 		Mi FoodDeb Web Page
+//- 	</title>
+//- </head>
+//- <body>
+//- 	<h1>
+//- 		Hola FoodDev
+//- 	</h1>
+//- </body>
+//- </html>
