@@ -24,7 +24,7 @@ app.use(express.static("public"))
 
 app.get("/", function(req,res){
   
-	var data = {
+	/*var data = {
 		title: "Mi primer super producto",
 		description: "Una mega super hiper compra",
 		imageURL: "data.png",
@@ -35,7 +35,7 @@ app.get("/", function(req,res){
 
 	product.save(function(err){
 		console.log(product);
-	});
+	});*/
 
 	res.render('index');
 });
