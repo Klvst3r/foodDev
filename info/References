@@ -108,6 +108,11 @@ Install Mongo DB
 -------------------
 	https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
+	Begin Instance
+		$ mongod
+			and after
+		$ mongo
+
 
 Webframewor Express JS
 --------------------
@@ -122,3 +127,8 @@ Correr Node
 	$ node app.js
 	Browser:
 		http://localhost:8081/
+
+Mongoose
+------------
+
+$ $ npm install mongoose --save

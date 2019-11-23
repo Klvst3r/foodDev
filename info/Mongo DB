@@ -1,0 +1,158 @@
+Mongo DB
+---------
+
+Iniatilize in Linux
+$ mongod
+
+$ mongo
+
+En el shell interactivo
+
+0. Que Bd se va a utilizar
+	use primera_pagina
+
+	Crea la Bd y la utiliza
+
+
+Se inizializa un nuevo modulo llamado mongoose, ya que cuando nos conectamos a una BD, lo hacemos a traves de un driver o un alibreria.
+
+En NodeJs utiliza una libreria para conectar a mongo con la Bd
+
+Instalamos en terminal
+
+$ npm install mongoose --save
+
+Eso deberia de crear 
+
++ mongoose@5.7.12
+added 19 packages from 13 contributors and audited 703 packages in 20.557s
+found 13 vulnerabilities (6 low, 7 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+
+Almacenar funcionalidad de la Bd con la applicacion
+var mongoose = require('mongoose');
+
+
+Conectar a la BD
+
+mongoose.connect("mongodb://localhost/primera")
+
+
+Nos indica un mensaje de advertencia:
+
+(node:18464) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+(node:18464) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+
+
+La tablas en Mongo son documentos, lo cual lo hace muy flexible si hay una tabla productos que guarde titulo y descripcion en un JSON,
+
+// Objeto JSON => Javascript Object Notation
+
+{
+	titulo: "Mi primer producto,
+	descripcion": "Un super producto"	
+}
+
+Parecido a un hash, esa es la estructura, pero si el segundo objeto tiene otra estructura:
+{
+	titulo: "Mi primer producto",
+	descripcion: "Un super producto",
+	cantidad: 10
+}
+
+La estructura no es rigida es flexible al registro guarda los datos aunque no esta definida el campo definido de un momento a otro, en SQL debemos ser claros en la estructura desde el inicio, al intentar ingresar un dato no definido simplemente no lo aceptara.
+
+En Mongoose se define un esquema
+
+//Schema de nuestros porductos
+
+var productSchema = {
+	title:String,
+	description: String,
+	imageURL: String,
+	pricing: Number
+
+}
+
+A partir del esquema se cra un modelo, 
+
+Referencia de modelos:
+http://codigofacilito.com/articulos/mvc-model-view-controller-explicado
+
+Se detalla el modelo MVC
+
+El grupo de registros que se almacenaran en mongo DB, que seria como la tabla llamada Product
+teniendo como segundo parametro el Scheme
+
+
+var Product = mongoose.model("Product", productSchema);
+
+
+Forzamos la creación de un nuevo producto para ver si se guarda.
+
+Al ingresar al hme de la pagina 
+
+app.get("/", function(req,res){
+  
+	res.render('index');
+});
+
+
+Se creara un nuevo producto, 
+
+app.et("/", function(req,res){
+  
+	var data = {
+		title: "Mi primer super producto",
+		description: "Una mega super hiper compra",
+		imageUrl: "data.png"
+		pricing: 10
+	}
+
+	var product = new Product(data);
+
+	product.save(function(err){
+		console.log(producto);
+	});
+
+	res.render('index');
+});
+
+
+El hash data y objeto JSON con sus claves del schema, para despues guardar
+
+
+Ejecutamos la aplicacion
+
+$ node app.js
+
+yu si no hay errores, en el navegador actualizamos y en la consola obtendremos el objeto que se guarda en la base de datos
+
+node app.js
+(node:15927) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+(node:15927) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+{ _id: 5dd89310a0349a3e37a613a8,
+  title: 'Mi primer super producto',
+  description: 'Una mega super hiper compra',
+  imageURL: 'data.png',
+  pricing: 10,
+  __v: 0 }
+
+
+  Comprobamos y comentamos el trabajo con insercion en la base de datos.
+
+  Finalizamos la conexion con la base de datos 
+
+  	/*var data = {
+		title: "Mi primer super producto",
+		description: "Una mega super hiper compra",
+		imageURL: "data.png",
+		pricing: 10
+	}
+
+	var product = new Product(data);
+
+	product.save(function(err){
+		console.log(product);
+	});*/
