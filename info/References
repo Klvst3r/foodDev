@@ -132,3 +132,53 @@ Mongoose
 ------------
 
 $ $ npm install mongoose --save
+
+Errores with Bootstrap
+--------------------
+	Bootstrap trying to load map file
+
+	https://developer.mozilla.org/en-US/docs/Tools/Debugger/Source_map_errors?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default
+
+		https://stackoverflow.com/questions/21773376/bootstrap-trying-to-load-map-file-how-to-disable-it-do-i-need-to-do-it
+		https://getbootstrap.com/docs/4.3/getting-started/contents/
+		https://getbootstrap.com/docs/3.4/getting-started/
+		https://github.com/IQSS/dataverse/issues/4875
+		https://workupload.com/file/T75eLdh
+
+
+Favicons
+----------------------
+	http://www.iconarchive.com/tag/ice-cream
+
+BodyPasrser Extension npm 
+-------------------------
+	npm install body-parser --save
+
+
+Error in Install packages with npm
+---------------------------
+	https://github.com/visionmedia/debug/issues/261
+		npm WARN enoent ENOENT: no such file or directory, open 
+
+		 am using mac os 10.11.4 and Node 6.2.2 and npm 3.9.5
+
+		The node_modules is in user/muser/node_modules/
+		I see mysql package in this folder
+		But when I try nam install, below message appears on terminal:
+
+		npm WARN enoent ENOENT: no such file or directory, open '/Users/muser/package.json'
+		npm WARN muser No description
+		npm WARN muser No repository field.
+		npm WARN muser No README data
+		npm WARN muser No license field.
+
+		There is no package.json at '/Users/muser/package.json'
+
+		What is wrong in my setup? and how can I fix it.
+
+		you should initialize package with npm init.
+		If you want to use debug without package initialize, just use npm install debug.
+
+	https://stackoverflow.com/questions/51811326/docker-error-no-such-file-or-directory-open-package-json
+
+	https://stackoverflow.com/questions/9484829/npm-cant-find-package-json/37687665
