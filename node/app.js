@@ -4,12 +4,26 @@ var mongoose = require("mongoose");
 
 var bodyParser = require("body-parser");
 
+var multer = require("multer");
+
+var cloudinary = require("cloudinary");
+
+//Archivo de configuracion co el cloudname
+cloudinary.config({
+	cloudname: 	"klvst3r",
+	api_key: 	"779745921757747",
+	api_secret: "-9XkqwiDknfqbmEiOnyMmSq-_mA" 
+});
+
 var app = express();
 
 mongoose.connect("mongodb://localhost/primera_pagina");
 
+//indicamos que modulos de node se utilizan
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(multer({dest: "./uploads" }));
+
 
 //Schema de productos
 var productSchema = {
@@ -58,10 +72,13 @@ app.post("/menu", function(req, res){
 
 		var product = new Product(data);
 
-		product.save(function(err){
+		//Console Data
+		console.log(req.files);
+
+		/*product.save(function(err){
 			console.log(product);
 			res.render('menu/new');
-		});
+		});*/
 
 	}else{
 		res.render('index');

@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+	head
+		title Food Dev - El mejor lugar para comer y desarrollar
+		meta(charset="utf-8")
+		link(href="/css/bootstrap.min.css" rel="stylesheet")
+		link( href="/css/style.css" rel="stylesheet")
+		link(href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet")
+		link(href="/css/animate.css" rel="stylesheet")
+	body
+		section(class="full-height text-center" id="main-content")
+			div(class="data")
+				div(class="col-md-3 center-block quitar-float text-center espacio-arriba")
+					img(src="img/icecream.png" alt="Icecream" class="animated fadeInDown")
+					h1(class="grande") Food Dev in HTML5 by 
+						p(class="pacifico verde animated bounceInUp retraso-1") - Klvst3r -
+					div(class="animated fadeInDown retraso-2")
+						h2 Ven, come y desarrolla
+						p(class="mediano") Somos una empresa conformada por desarrolladores profesionales
+						nav(class="mediano")
+							a(href="menu.html" class="espacio-derecha") Menu
+							a(href="contacto.html" class="espacio-derecha") Contacto
+							a(href="menu.html") Menu
+		script(src="https://code.jquery.com/jquery-2.1.1.min.js")
+		script(src="js/main.js")
