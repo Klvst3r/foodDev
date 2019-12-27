@@ -1,0 +1,34 @@
+Development framework integration
+
+Cloudinary integrates with the most popular development frameworks via open-source SDKs. Take a look at the sample code below to see how you can use your development framework to upload an image and then deliver it with an on-the-fly transformation applied.
+Account credentials
+
+    Cloud name:klvst3r
+    API key:779745921757747
+    API secret:9XkqwiDknfqbmEiOnyMmSq
+    Environment variable:cloudinary://779745921757747:-9XkqwiDknfqbmEiOnyMmSq-_mA@klvst3r/
+
+Sample upload code
+
+cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });
+
+Sample image manipulation tag
+
+cloudinary.image("sample", {"crop":"fill","gravity":"faces","width":300,"height":200,"format":"jpg"});
+
+Sample upload code
+	cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });
+
+Sample image manipulation tags
+	cloudinary.image("sample", {"crop":"fill","gravity":"faces","width":300,"height":200,"format":"jpg"});
+
+
+	
+Las variables mas importantes son:
+
+ Cloud name:
+API Key: 			klvst3r
+Copy to clipboard:	779745921757747
+API Secret:			-9XkqwiDknfqbmEiOnyMmSq-_mA
+
+

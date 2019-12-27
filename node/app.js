@@ -8,6 +8,9 @@ var multer = require("multer");
 
 var cloudinary = require("cloudinary");
 
+
+
+
 //Archivo de configuracion co el cloudname
 cloudinary.config({
 	cloudname: 	"klvst3r",
@@ -22,7 +25,7 @@ mongoose.connect("mongodb://localhost/primera_pagina");
 //indicamos que modulos de node se utilizan
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(multer({dest: "./uploads" }));
+//app.use(multer({dest: "./uploads" }));
 
 
 //Schema de productos
@@ -75,10 +78,10 @@ app.post("/menu", function(req, res){
 		//Console Data
 		console.log(req.files);
 
-		/*product.save(function(err){
+		product.save(function(err){
 			console.log(product);
 			res.render('menu/new');
-		});*/
+		});
 
 	}else{
 		res.render('index');

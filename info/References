@@ -182,3 +182,29 @@ Error in Install packages with npm
 	https://stackoverflow.com/questions/51811326/docker-error-no-such-file-or-directory-open-package-json
 
 	https://stackoverflow.com/questions/9484829/npm-cant-find-package-json/37687665
+
+
+Cloud in Heroku
+------------------------
+	Cloudinary.com  (Servicio de Hosting con Imagenes)
+
+	Para subir imagenesmediante los lemguajes de programación
+	Rails, PHP, Node, Django, jQuery, Angular, Java, .Net, iOS, Android,
+
+	cloudinary.uoloader.upload("sheep.jpg", function(result){console.log(result)},
+		{widht:800, height: 600, crop: "limit"} );
+
+	Es necesario Registrarse:
+
+
+Multer - Midleware para poder leer archivos que se suben
+------------------------
+	
+	$ npm install multerk --save
+
+
+Otro plugin es la de cloudinary que es para poder subir imagenes mde anera sencilla
+--------------------------
+	$ npm install cloudinary --save
+
+	
